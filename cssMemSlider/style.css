@@ -1,7 +1,8 @@
 #slider {
     margin: 0 auto;
-    width: 800px;
-    max-width: 100%;
+    padding: 1vh 0;
+    width: 80vw;
+    height: 100%;
     text-align: center;
     background-color: #444;
  }
@@ -13,7 +14,7 @@
     text-decoration: none;
  }
  #slides{
-    padding: 10px;
+    padding: 2% 2% 1% 2%;
     background-color: #444;
     position: relative;
     z-index: 1;
@@ -50,16 +51,14 @@
     transition: margin-left 500ms ease-in;
     width: 400%;
     line-height: 0;
-    height: 500px;
+    height: 50vw;
  }
 
  #text .inner {
     transition: margin-left 200ms ease-in;
     width: 400%;
-    line-height: 0;
-    height: 50px;
     text-align: left;
-    font: normal normal 28px/20px Arial;
+    font: normal bold 25px/30px Arial;
  }
 
  #slides .slide {
@@ -103,15 +102,15 @@
      flex-direction: row;
      flex-wrap: nowrap;
      justify-content: space-between;
-     padding: 10px;
+     padding: 0 4%;
  }
 
  #text {
-     width:75%;
+     width:60%;
  }
 
  #bullets {
-    width:25%;
+    width:40%;
     text-align: right;
  }
  #bullets label {
@@ -120,7 +119,7 @@
     height: 10px;
     border-radius:50%;
     background: rgb(81, 153, 255);
-    margin: 0 5px;
+    margin: 0 2%;
     border: 10px solid #444;
  }
 
@@ -153,12 +152,11 @@
 
  @media (max-width: 600px) {
    #slider {
-      max-width: 580px;
       width: 95vw;
    }
 
    #slides .inner{
-      max-height: 410px;
+       height: 60vw;
    }
 
    .down_box {
@@ -171,7 +169,7 @@
 
   #text .inner {
    justify-content: center;
-   font: normal normal 18px/15px Arial;
+   font: normal normal 18px/25px Arial;
 }
  
   #bullets {
@@ -182,11 +180,7 @@
  
  @media screen and (max-width: 320px) {
    #slider {
-      max-width: 300px;
-   }
-
-   #slides .inner{
-      max-height: 260px;
+      padding: 10vh 0; 
    }
 
    .down_box {
@@ -199,7 +193,7 @@
 
   #text .inner {
    justify-content: center;
-   font: normal normal 14px/10px Arial;
+   font: normal normal 14px/20px Arial;
 }
  
   #bullets {
