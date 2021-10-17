@@ -1,0 +1,209 @@
+#slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    background-color: #444;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides{
+    padding: 10px;
+    background-color: #444;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow, #overflow_text {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide_1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide_1:checked ~ .down_box #text .inner {
+    margin-left: 0;
+ }
+ #slide_2:checked ~ #slides .inner{
+    margin-left: -100%;
+ }
+ #slide_2:checked ~ .down_box #text .inner {
+    margin-left: -100%;
+ }
+ #slide_3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide_3:checked ~ .down_box #text .inner {
+    margin-left: -200%;
+ }
+ #slide_4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slide_4:checked ~ .down_box #text .inner {
+    margin-left: -300%;
+ }
+ #slides .inner{
+    transition: margin-left 500ms ease-in;
+    width: 400%;
+    line-height: 0;
+    height: 500px;
+ }
+
+ #text .inner {
+    transition: margin-left 200ms ease-in;
+    width: 400%;
+    line-height: 0;
+    height: 50px;
+    text-align: left;
+    font: normal normal 28px/20px Arial;
+ }
+
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+ }
+ #text .text {
+    width: 25%;
+    float:left;
+    display: flex;
+    height: 100%;
+    color: black;
+ }
+ #slides .slide_1 {
+    background-image:url(https://webstockreview.net/images/language-clipart-extra-help-12.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ }
+ #slides .slide_2 {
+    background-image:url(https://webstockreview.net/images/language-clipart-extra-help-12.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ }
+ #slides .slide_3 {
+    background-image:url(https://webstockreview.net/images/language-clipart-extra-help-12.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ }
+ #slides .slide_4 {
+    background-image:url(https://webstockreview.net/images/language-clipart-extra-help-12.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+ }
+
+ .down_box {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     padding: 10px;
+ }
+
+ #text {
+     width:75%;
+ }
+
+ #bullets {
+    width:25%;
+    text-align: right;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;
+    background: rgb(81, 153, 255);
+    margin: 0 5px;
+    border: 10px solid #444;
+ }
+
+ #bullets label:hover {
+    background: white;
+ }
+
+ #slide_1:checked ~ .down_box #bullets label:nth-child(1),
+ #slide_2:checked ~ .down_box #bullets label:nth-child(2),
+ #slide_3:checked ~ .down_box #bullets label:nth-child(3),
+ #slide_4:checked ~ .down_box #bullets label:nth-child(4) {
+    width: 9px;
+    height: 9px;
+    border: 1px solid rgb(81, 153, 255);
+    background: #444;
+    margin: 0 15px 10px 15px;
+ }
+
+ #slide_1:checked ~ .down_box #bullets label:nth-child(1):hover,
+ #slide_2:checked ~ .down_box #bullets label:nth-child(2):hover,
+ #slide_3:checked ~ .down_box #bullets label:nth-child(3):hover,
+ #slide_4:checked ~ .down_box #bullets label:nth-child(4):hover {
+    transition: 0.3s;
+    width: 9px;
+    height: 9px;
+    border: 1px solid white;
+    background: #444;
+    margin: 0 15px 10px 15px;
+ }
+
+ @media (max-width: 600px) {
+   #slider {
+      max-width: 580px;
+      width: 95vw;
+   }
+
+   #slides .inner{
+      max-height: 410px;
+   }
+
+   .down_box {
+      flex-direction: column-reverse;
+  }
+ 
+  #text {
+      width:100%;
+  }
+
+  #text .inner {
+   justify-content: center;
+   font: normal normal 18px/15px Arial;
+}
+ 
+  #bullets {
+     width:100%;
+     text-align: center;
+  }
+}
+ 
+ @media screen and (max-width: 320px) {
+   #slider {
+      max-width: 300px;
+   }
+
+   #slides .inner{
+      max-height: 260px;
+   }
+
+   .down_box {
+      flex-direction: column-reverse;
+  }
+ 
+  #text {
+      width:100%;
+  }
+
+  #text .inner {
+   justify-content: center;
+   font: normal normal 14px/10px Arial;
+}
+ 
+  #bullets {
+     width:100%;
+     text-align: center;
+  }
+}
